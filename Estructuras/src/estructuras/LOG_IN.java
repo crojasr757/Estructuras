@@ -5,7 +5,7 @@
  */
 package estructuras;
 
-import java.awt.Color;
+
 import estructuras.Logica.Log_in_Logica;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -38,8 +38,8 @@ public class LOG_IN extends javax.swing.JFrame {
         Titulo = new javax.swing.JLabel();
         Usuario = new javax.swing.JLabel();
         Contrasenia = new javax.swing.JLabel();
-        Cuenta = new javax.swing.JTextField();
-        Contra = new javax.swing.JPasswordField();
+        cuenta = new javax.swing.JTextField();
+        contra = new javax.swing.JPasswordField();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -89,22 +89,22 @@ public class LOG_IN extends javax.swing.JFrame {
         getContentPane().add(Contrasenia);
         Contrasenia.setBounds(340, 210, 170, 60);
 
-        Cuenta.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        Cuenta.addActionListener(new java.awt.event.ActionListener() {
+        cuenta.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        cuenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CuentaActionPerformed(evt);
+                cuentaActionPerformed(evt);
             }
         });
-        getContentPane().add(Cuenta);
-        Cuenta.setBounds(720, 210, 230, 50);
+        getContentPane().add(cuenta);
+        cuenta.setBounds(720, 210, 230, 50);
 
-        Contra.addActionListener(new java.awt.event.ActionListener() {
+        contra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ContraActionPerformed(evt);
+                contraActionPerformed(evt);
             }
         });
-        getContentPane().add(Contra);
-        Contra.setBounds(720, 290, 230, 50);
+        getContentPane().add(contra);
+        contra.setBounds(720, 290, 230, 50);
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estructuras/Imagenes/restaurant-high-resolution-wallpaper-for-desktop-background-download-images-free-colors-artworks-display-1920x1080.jpg"))); // NOI18N
         getContentPane().add(Fondo);
@@ -115,41 +115,49 @@ public class LOG_IN extends javax.swing.JFrame {
 
     private void anteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anteriorActionPerformed
         // TODO add your handling code here:
+        Menu_Principal principal= new Menu_Principal();
+                principal.setVisible(true);
+            this.setVisible(false);
+        
         
     }//GEN-LAST:event_anteriorActionPerformed
 
     private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
         // TODO add your handling code here:
+        Log_in_Logica logica=new Log_in_Logica();
+       logica.Log_in_Logica();
+       
+        
         
     }//GEN-LAST:event_siguienteActionPerformed
 
-    private void CuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CuentaActionPerformed
-       Log_in_Logica logica=new Log_in_Logica();
-       logica.login();
+    private void cuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuentaActionPerformed
+       
                
-    }//GEN-LAST:event_CuentaActionPerformed
+    }//GEN-LAST:event_cuentaActionPerformed
 
-    private void ContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContraActionPerformed
+    private void contraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraActionPerformed
         // TODO add your handling code here:
-        Log_in_Logica logica=new Log_in_Logica();
-       logica.login();
-    }//GEN-LAST:event_ContraActionPerformed
+        
+    }//GEN-LAST:event_contraActionPerformed
 
     public JPasswordField getContra() {
-        return Contra;
+        return contra;
     }
 
-    public void setContra(JPasswordField Contra) {
-        this.Contra = Contra;
+    public void setContra(JPasswordField contra) {
+        this.contra = contra;
     }
 
     public JTextField getCuenta() {
-        return Cuenta;
+        return cuenta;
     }
 
-    public void setCuenta(JTextField Cuenta) {
-        this.Cuenta = Cuenta;
+    public void setCuenta(JTextField cuenta) {
+        this.cuenta = cuenta;
     }
+
+   
 
     /**
      * @param args the command line arguments
@@ -187,13 +195,13 @@ public class LOG_IN extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPasswordField Contra;
     private javax.swing.JLabel Contrasenia;
-    private javax.swing.JTextField Cuenta;
     private javax.swing.JLabel Fondo;
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel Usuario;
     private java.awt.Button anterior;
+    private javax.swing.JPasswordField contra;
+    private javax.swing.JTextField cuenta;
     private java.awt.Button siguiente;
     // End of variables declaration//GEN-END:variables
 }
