@@ -7,6 +7,8 @@ package estructuras;
 
 import java.awt.Color;
 import estructuras.Logica.Log_in_Logica;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 /**
  *
  * @author Caoba
@@ -18,7 +20,8 @@ public class LOG_IN extends javax.swing.JFrame {
      */
     public LOG_IN() {
         initComponents();
-        
+        this.setLocationRelativeTo(null);
+        this.setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -34,7 +37,6 @@ public class LOG_IN extends javax.swing.JFrame {
         anterior = new java.awt.Button();
         Titulo = new javax.swing.JLabel();
         Usuario = new javax.swing.JLabel();
-        Titulo1 = new javax.swing.JLabel();
         Contrasenia = new javax.swing.JLabel();
         Cuenta = new javax.swing.JTextField();
         Contra = new javax.swing.JPasswordField();
@@ -55,7 +57,7 @@ public class LOG_IN extends javax.swing.JFrame {
             }
         });
         getContentPane().add(siguiente);
-        siguiente.setBounds(390, 410, 170, 70);
+        siguiente.setBounds(800, 520, 280, 90);
 
         anterior.setActionCommand("Anterior");
         anterior.setBackground(new java.awt.Color(255, 204, 51));
@@ -67,41 +69,46 @@ public class LOG_IN extends javax.swing.JFrame {
             }
         });
         getContentPane().add(anterior);
-        anterior.setBounds(70, 410, 170, 70);
+        anterior.setBounds(180, 520, 280, 90);
 
-        Titulo.setFont(new java.awt.Font("Cooper Black", 3, 48)); // NOI18N
+        Titulo.setFont(new java.awt.Font("Cooper Black", 3, 80)); // NOI18N
         Titulo.setForeground(new java.awt.Color(255, 255, 0));
         Titulo.setText("Login");
         getContentPane().add(Titulo);
-        Titulo.setBounds(230, 10, 360, 140);
+        Titulo.setBounds(460, 0, 360, 140);
 
-        Usuario.setFont(new java.awt.Font("Cooper Black", 0, 24)); // NOI18N
+        Usuario.setFont(new java.awt.Font("Cooper Black", 0, 48)); // NOI18N
         Usuario.setForeground(new java.awt.Color(255, 255, 255));
         Usuario.setText("Password");
         getContentPane().add(Usuario);
-        Usuario.setBounds(70, 230, 210, 60);
+        Usuario.setBounds(340, 290, 250, 70);
 
-        Titulo1.setFont(new java.awt.Font("Cooper Black", 3, 48)); // NOI18N
-        Titulo1.setForeground(new java.awt.Color(255, 255, 255));
-        Titulo1.setText("Login");
-        getContentPane().add(Titulo1);
-        Titulo1.setBounds(230, 10, 360, 140);
-
-        Contrasenia.setFont(new java.awt.Font("Cooper Black", 0, 24)); // NOI18N
+        Contrasenia.setFont(new java.awt.Font("Cooper Black", 0, 48)); // NOI18N
         Contrasenia.setForeground(new java.awt.Color(255, 255, 255));
         Contrasenia.setText("User");
         getContentPane().add(Contrasenia);
-        Contrasenia.setBounds(70, 170, 170, 60);
+        Contrasenia.setBounds(340, 210, 170, 60);
 
         Cuenta.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Cuenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CuentaActionPerformed(evt);
+            }
+        });
         getContentPane().add(Cuenta);
-        Cuenta.setBounds(269, 190, 170, 20);
+        Cuenta.setBounds(720, 210, 230, 50);
+
+        Contra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContraActionPerformed(evt);
+            }
+        });
         getContentPane().add(Contra);
-        Contra.setBounds(270, 250, 170, 20);
+        Contra.setBounds(720, 290, 230, 50);
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estructuras/Imagenes/restaurant-high-resolution-wallpaper-for-desktop-background-download-images-free-colors-artworks-display-1920x1080.jpg"))); // NOI18N
         getContentPane().add(Fondo);
-        Fondo.setBounds(0, 0, 630, 540);
+        Fondo.setBounds(0, 0, 1700, 890);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -115,6 +122,34 @@ public class LOG_IN extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_siguienteActionPerformed
+
+    private void CuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CuentaActionPerformed
+       Log_in_Logica logica=new Log_in_Logica();
+       logica.login();
+               
+    }//GEN-LAST:event_CuentaActionPerformed
+
+    private void ContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContraActionPerformed
+        // TODO add your handling code here:
+        Log_in_Logica logica=new Log_in_Logica();
+       logica.login();
+    }//GEN-LAST:event_ContraActionPerformed
+
+    public JPasswordField getContra() {
+        return Contra;
+    }
+
+    public void setContra(JPasswordField Contra) {
+        this.Contra = Contra;
+    }
+
+    public JTextField getCuenta() {
+        return Cuenta;
+    }
+
+    public void setCuenta(JTextField Cuenta) {
+        this.Cuenta = Cuenta;
+    }
 
     /**
      * @param args the command line arguments
@@ -157,7 +192,6 @@ public class LOG_IN extends javax.swing.JFrame {
     private javax.swing.JTextField Cuenta;
     private javax.swing.JLabel Fondo;
     private javax.swing.JLabel Titulo;
-    private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Usuario;
     private java.awt.Button anterior;
     private java.awt.Button siguiente;
