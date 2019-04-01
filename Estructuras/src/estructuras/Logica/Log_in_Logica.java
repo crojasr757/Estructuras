@@ -5,7 +5,7 @@
  */
 package estructuras.Logica;
 
-import estructuras.LOG_IN;
+import estructuras.Log_In;
 import estructuras.Menu_Personal;
 import javax.swing.JOptionPane;
 
@@ -13,9 +13,9 @@ import javax.swing.JOptionPane;
  *
  * @author Caoba
  */
-public class Log_in_Logica extends estructuras.LOG_IN {
-    LOG_IN login=new LOG_IN();
-      public void Log_in_Logica(){
+public class Log_in_Logica extends estructuras.Log_In {
+    Log_In login=new Log_In();
+      public void LogIn(){
           Menu_Personal acceso= new Menu_Personal();
        String  usuarioconfirmado = login.getCuenta().getText();
        String contraseñaconfirmada = login.getContra().getText();

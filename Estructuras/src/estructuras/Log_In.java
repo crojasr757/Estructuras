@@ -7,18 +7,20 @@ package estructuras;
 
 
 import estructuras.Logica.Log_in_Logica;
+import estructuras.Menu_Principal;
+import estructuras.Menu_Principal;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 /**
  *
  * @author Caoba
  */
-public class LOG_IN extends javax.swing.JFrame {
+public class Log_In extends javax.swing.JFrame {
 
     /**
      * Creates new form LOG_IN
      */
-    public LOG_IN() {
+    public Log_In() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setExtendedState(MAXIMIZED_BOTH);
@@ -125,7 +127,7 @@ public class LOG_IN extends javax.swing.JFrame {
     private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
         // TODO add your handling code here:
         Log_in_Logica logica=new Log_in_Logica();
-       logica.Log_in_Logica();
+       logica.LogIn();
        
         
         
@@ -176,20 +178,23 @@ public class LOG_IN extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LOG_IN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Log_In.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LOG_IN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Log_In.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LOG_IN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Log_In.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LOG_IN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Log_In.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LOG_IN().setVisible(true);
+                new Log_In().setVisible(true);
             }
         });
     }
