@@ -5,6 +5,9 @@
  */
 package estructuras;
 
+import java.awt.Color;
+import static java.awt.Frame.MAXIMIZED_BOTH;
+
 /**
  *
  * @author Caoba
@@ -16,6 +19,7 @@ public class Menu_Personal extends javax.swing.JFrame {
      */
     public Menu_Personal() {
         initComponents();
+         this.getContentPane().setBackground(Color.BLACK);
         this.setLocationRelativeTo(null);
         this.setExtendedState(MAXIMIZED_BOTH);
     }
@@ -29,21 +33,118 @@ public class Menu_Personal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        anterior = new java.awt.Button();
+        registrar = new java.awt.Button();
+        ordenes = new java.awt.Button();
+        mesas = new java.awt.Button();
+        factura = new java.awt.Button();
+        titulo = new javax.swing.JLabel();
+        fondomenuper = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1700, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 890, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
+
+        anterior.setActionCommand("Anterior");
+        anterior.setBackground(new java.awt.Color(255, 204, 51));
+        anterior.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        anterior.setLabel("Anterior");
+        anterior.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                anteriorActionPerformed(evt);
+            }
+        });
+        getContentPane().add(anterior);
+        anterior.setBounds(0, 620, 170, 70);
+
+        registrar.setActionCommand("REGISTRAR CLIENTES");
+        registrar.setBackground(new java.awt.Color(51, 255, 153));
+        registrar.setFont(new java.awt.Font("Dialog", 0, 32)); // NOI18N
+        registrar.setLabel("REGISTRAR CLIENTE");
+        registrar.setName(""); // NOI18N
+        registrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(registrar);
+        registrar.setBounds(550, 570, 350, 120);
+
+        ordenes.setActionCommand("TOMAR ORDENES");
+        ordenes.setBackground(new java.awt.Color(51, 255, 153));
+        ordenes.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        ordenes.setLabel("TOMAR ORDENES");
+        ordenes.setName(""); // NOI18N
+        ordenes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ordenesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ordenes);
+        ordenes.setBounds(550, 140, 350, 120);
+
+        mesas.setActionCommand("ADMINISTRAR MESAS");
+        mesas.setBackground(new java.awt.Color(51, 255, 153));
+        mesas.setFont(new java.awt.Font("Dialog", 0, 32)); // NOI18N
+        mesas.setLabel("ADMINISTRAR MESAS");
+        mesas.setName(""); // NOI18N
+        mesas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mesasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(mesas);
+        mesas.setBounds(550, 280, 350, 120);
+
+        factura.setActionCommand("FACTURAR");
+        factura.setBackground(new java.awt.Color(51, 255, 153));
+        factura.setFont(new java.awt.Font("Dialog", 0, 32)); // NOI18N
+        factura.setLabel("FACTURAR MESA");
+        factura.setName(""); // NOI18N
+        factura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                facturaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(factura);
+        factura.setBounds(550, 420, 350, 120);
+
+        titulo.setFont(new java.awt.Font("Century Schoolbook", 3, 48)); // NOI18N
+        titulo.setForeground(new java.awt.Color(255, 255, 255));
+        titulo.setText("MENU DEL PERSONAL");
+        getContentPane().add(titulo);
+        titulo.setBounds(430, 20, 620, 80);
+
+        fondomenuper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estructuras/Imagenes/photo-1414235077428-338989a2e8c0.jpg"))); // NOI18N
+        getContentPane().add(fondomenuper);
+        fondomenuper.setBounds(180, 10, 1710, 900);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_registrarActionPerformed
+
+    private void ordenesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ordenesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ordenesActionPerformed
+
+    private void mesasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mesasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mesasActionPerformed
+
+    private void facturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facturaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_facturaActionPerformed
+
+    private void anteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anteriorActionPerformed
+        // TODO add your handling code here:
+        Log_In login= new Log_In();
+        login.setVisible(true);
+        this.setVisible(false);
+
+    }//GEN-LAST:event_anteriorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -82,6 +183,11 @@ public class Menu_Personal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button anterior;
-    private java.awt.Button anterior1;
+    private java.awt.Button factura;
+    private javax.swing.JLabel fondomenuper;
+    private java.awt.Button mesas;
+    private java.awt.Button ordenes;
+    private java.awt.Button registrar;
+    private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
 }

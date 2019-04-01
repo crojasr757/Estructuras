@@ -5,6 +5,8 @@
  */
 package estructuras;
 
+import java.awt.Color;
+
 /**
  *
  * @author Caoba
@@ -16,8 +18,10 @@ public class Menu_Principal extends javax.swing.JFrame {
      */
     public Menu_Principal() {
         initComponents();
+        this.getContentPane().setBackground(Color.BLACK);
         this.setLocationRelativeTo(null);
         this.setExtendedState(MAXIMIZED_BOTH);
+        
     }
 
     /**
@@ -29,21 +33,58 @@ public class Menu_Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        clientin = new java.awt.Button();
+        personalin = new java.awt.Button();
+        FondoMenuP = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1700, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 890, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(51, 0, 51));
+        getContentPane().setLayout(null);
+
+        clientin.setActionCommand("CLIENTE");
+        clientin.setBackground(new java.awt.Color(255, 204, 51));
+        clientin.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        clientin.setLabel("CLIENTE ONLINE");
+        clientin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clientinActionPerformed(evt);
+            }
+        });
+        getContentPane().add(clientin);
+        clientin.setBounds(670, 230, 350, 130);
+
+        personalin.setActionCommand("PERSONAL");
+        personalin.setBackground(new java.awt.Color(255, 204, 51));
+        personalin.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        personalin.setLabel("PERSONAL");
+        personalin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                personalinActionPerformed(evt);
+            }
+        });
+        getContentPane().add(personalin);
+        personalin.setBounds(280, 230, 350, 130);
+
+        FondoMenuP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estructuras/Imagenes/c2177ff23f862b515dd9f1517b011727-700.jpg"))); // NOI18N
+        getContentPane().add(FondoMenuP);
+        FondoMenuP.setBounds(60, -100, 1580, 1000);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void clientinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientinActionPerformed
+        // TODO add your handling code here:
+       
+
+    }//GEN-LAST:event_clientinActionPerformed
+
+    private void personalinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personalinActionPerformed
+        // TODO add your handling code here:
+         
+             Log_In login= new Log_In();
+        login.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_personalinActionPerformed
 
     /**
      * @param args the command line arguments
@@ -81,5 +122,8 @@ public class Menu_Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel FondoMenuP;
+    private java.awt.Button clientin;
+    private java.awt.Button personalin;
     // End of variables declaration//GEN-END:variables
 }
